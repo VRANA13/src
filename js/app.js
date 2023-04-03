@@ -8,8 +8,8 @@
  *
  * Please update the following with your information:
  *
- *      Name:    VISHALKUMAR RANA    
- *      Student ID: 151059219   
+ *      Name:    VISHALKUMAR RANA
+ *      Student ID: 151059219
  *      Date:  MARCH 23, 2023
  */
 

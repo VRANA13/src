@@ -5,7 +5,7 @@
  */
 
 window.artists = [
-  {     
+  {
     id: "A1",
     name: "Arijit Singh",
     links: [

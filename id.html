@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+
+      label,
+      input,
+      select {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+    <form action="/subscribe/new" method="POST">
+          <label for="name">Name:</label>     <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>    
+      <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone number:</label>    
+      <input type="tel" id="phone" name="phone" required />
+
+          <label for="address">Address:</label>    
+      <textarea id="address" name="address" rows="4" cols="50" required></textarea>
+
+          <label for="preference">Preference:</label>    
+      <select id="preference" name="preference" required>
+               
+        <option value="1">Sent daily</option>
+               
+        <option value="2">Sent weekly</option>
+               
+        <option value="3">Sent periodically</option>
+           
+      </select>
+
+          <button type="submit">Submit</button>
+    </form>
+    Tools.h Tools.cpp Person.h Person.cpp Contact.h   Contact.cpp w9_tester.cpp  contacts.txt
+  </body>
+</html>

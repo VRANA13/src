@@ -6,7 +6,7 @@
 window.songs = [
   //arjit singh
   {
-    id: "S1",    
+    id: "S1",
     artistId: "A1",
     title: "Tum Hi Ho",
     year: "2013",
