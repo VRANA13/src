@@ -259,3 +259,35 @@ fieldset {
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
+tr:hover {
+  color: black;
+
+  background-color: mediumpurple;
+}
+@keyframes move-up {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+  }
+}
+
+th:hover {
+  border-width: 3px;
+  border-color: rgb(111, 8, 109);
+  background-color: rgb(246, 3, 181);
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+td:hover {
+  border-width: 3px;
+  border-color: rgb(68, 0, 124);
+  background-color: rgb(246, 3, 181);
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  text-align: center;
+}
