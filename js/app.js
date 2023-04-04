@@ -22,7 +22,7 @@ window.activeArtistID = window.songs.artistId;
 var menu = document.getElementById("menu");
 
 window.artists.forEach((element) => {
-  var liEle = document.createElement("li");
+  var liEle = document.createElement("ul");
   var buttonEle = document.createElement("button");
 
   buttonEle.onclick = function () {

@@ -268,8 +268,8 @@ tr:hover {
   0% {
     transform: translateY(0) scale(1);
   }
-  50% {
-    transform: translateY(-20px) scale(1.2);
+  10% {
+    transform: translateY(-5px) scale(1.1);
   }
 }
 
@@ -278,9 +278,11 @@ th:hover {
   border-color: rgb(111, 8, 109);
   background-color: rgb(246, 3, 181);
   font-weight: bold;
-  font-style: italic;
+  /* font-style: italic; */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  animation: move-up 5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 td:hover {
   border-width: 3px;
@@ -288,6 +290,15 @@ td:hover {
   background-color: rgb(246, 3, 181);
   font-weight: bold;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-style: italic;
+  /* font-style: italic; */
   text-align: center;
+  animation: move-up 5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+#menu {
+  display: flex;
+  flex-direction: row;
+}
+ul {
+  margin-left: 6rem;
 }
