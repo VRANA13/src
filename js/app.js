@@ -34,18 +34,18 @@ window.artists.forEach((element) => {
   menu.append(liEle);
 });
 
-var tHeadEle = document.querySelector("table thead");
-var trElement = document.createElement("tr");
-var thS_Name = document.createElement("th");
-thS_Name.innerHTML = "Song Name";
-trElement.append(thS_Name);
-var thYear = document.createElement("th");
-thYear.innerHTML = "Year Recorded";
-trElement.append(thYear);
-var thTime = document.createElement("th");
-thTime.innerHTML = "Duration(mm:ss)";
-trElement.append(thTime);
-tHeadEle.append(trElement);
+// var tHeadEle = document.querySelector("table thead");
+// var trElement = document.createElement("tr");
+// var thS_Name = document.createElement("th");
+// thS_Name.innerHTML = "Song Name";
+// trElement.append(thS_Name);
+// var thYear = document.createElement("th");
+// thYear.innerHTML = "Year Recorded";
+// trElement.append(thYear);
+// var thTime = document.createElement("th");
+// thTime.innerHTML = "Duration(mm:ss)";
+// trElement.append(thTime);
+// tHeadEle.append(trElement);
 
 window.render = function () {
   var selectedArtist = window.artists.find((artist) => artist.id === window.activeArtistID);
@@ -58,28 +58,59 @@ window.render = function () {
 
   var selectedArtistElement = document.getElementById("selected-artist");
   selectedArtistElement.innerHTML = artistInfo;
-
   var songsToRender = window.songs.filter((song) => song.artistId === window.activeArtistID);
+
   var songsTableElement = document.getElementById("songs");
   songsTableElement.innerHTML = "";
 
+  // var line = document.createElement("hr");
+  // selectedArtist.appendChild(line);
+
+  // songsToRender.forEach((song) => {
+  //   if (!song.discontinued) {
+  //     // var trEle = document.createElement("tr");
+  //     // var nm = document.createElement("td");
+  //     // nm.innerHTML = song.title;
+  //     // trEle.append(nm);
+  //     // var yr = document.createElement("td");
+  //     // yr.innerHTML = song.year;
+  //     // trEle.append(yr);
+  //     // var ti = document.createElement("td");
+  //     // ti.textContent = `${song.duration}`;
+  //     // trEle.append(ti);
+  //     // songsTableElement.appendChild(trEle);
+  //     var div_card = document.createElement("div");
+  //     div_card;
+  //   }
+  // });
+
   songsToRender.forEach((song) => {
+    // selectedArtistElement.insertAdjacentHTML("afterend", "<hr>");
     if (!song.discontinued) {
-      var trEle = document.createElement("tr");
+      var songCard = document.createElement("div");
+      songCard.className = "song-card";
 
-      var nm = document.createElement("td");
-      nm.innerHTML = song.title;
-      trEle.append(nm);
+      var songTitle = document.createElement("h3");
+      songTitle.textContent = song.title;
+      songCard.appendChild(songTitle);
 
-      var yr = document.createElement("td");
-      yr.innerHTML = song.year;
-      trEle.append(yr);
+      var img = document.createElement("img");
+      img.src = song.url;
 
-      var ti = document.createElement("td");
-      ti.textContent = `${song.duration}`;
-      trEle.append(ti);
+      songCard.appendChild(img);
+      var songYear = document.createElement("p");
+      songYear.textContent = "(" + song.year + ")";
+      songCard.appendChild(songYear);
 
-      songsTableElement.appendChild(trEle);
+      var songDuration = document.createElement("p");
+      songDuration.textContent = song.duration;
+      songCard.appendChild(songDuration);
+
+      var musicAp = document.createElement("audio");
+      musicAp.controls = true;
+      musicAp.src = song.music;
+      songCard.appendChild(musicAp);
+      songsTableElement.appendChild(songCard);
     }
   });
 };
